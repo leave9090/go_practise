@@ -8,7 +8,7 @@ import (
 
 func MutexAdd(num int) int {
 	wg := sync.WaitGroup{}
-	var mutex sync.Mutex
+	mutex := &sync.Mutex{}
 	var ss int
 	start := time.Now()
 	for i := 0; i < num; i++ {
